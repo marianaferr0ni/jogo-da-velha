@@ -40,3 +40,17 @@ const acabarJogo = (empate) => {
     }
     vencedor.classList.add("mostrar");
 };
+
+const ganhou = (jogadorDaVez) => {
+    return combinacoes.some((combination) => {
+      return combination.every((index) => {
+        return quadrados[index].classList.contains(jogadorDaVez);
+      });
+    });
+};
+  
+const empatou = () => {
+    return [...quadrados].every((q) => {
+      return q.classList.contains("x") || q.classList.contains("o");
+    });
+};
