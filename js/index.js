@@ -75,3 +75,27 @@ const mudarJogador = () => {
   
     setTudoAquiHoverClass();
 };
+
+const handleClick = (e) => {
+    const q = e.target;
+    const classToAdd = vezDoO ? "o" : "x";
+  
+    colocarMarca(q, classToAdd);
+  
+    const vitoria = ganhou(classToAdd);
+  
+    const empatee = empatou();
+  
+    if (vitoria) {
+      acabarJogo(false);
+    } else if (empatee) {
+      acabarJogo(true);
+    } else {
+      // Mudar símbolo
+      mudarJogador();
+    }
+};
+  
+iniciarJogo();
+  
+botao.addEventListener("click", iniciarJogo);
