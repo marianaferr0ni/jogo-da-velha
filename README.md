@@ -16,7 +16,7 @@
 </div>
 
 <img src="/imagens/computador.jpeg" alt="printcomputador">
-<img src="/imagens/celular.jpeg" alt="printcelular">
+<img src="/imagens/celular.jpeg" alt="printcelular" width="500px" height="300px">
 <img src="/imagens/lighthouse.jpeg" alt="printlighthouse">
 
 
