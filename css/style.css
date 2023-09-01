@@ -17,7 +17,7 @@ h1{
     margin-top: 5%;
     text-align: center;
 }
-/*-------------------------------------------------------------------------------------------------------------------*/
+
 .tudoaqui{
     margin-top: 5%;
     display: grid;
@@ -28,4 +28,31 @@ h1{
     justify-items: center;
     align-items: center;
     grid-template-columns: repeat(3, auto);
+}
+.tudoaqui.x .q:not(.x):not(.o):hover::after,
+.tudoaqui.x .q:not(.x):not(.o):hover::before,
+.tudoaqui.o .q:not(.x):not(.o):hover::after,
+.tudoaqui.o .q:not(.x):not(.o):hover::before{
+    background-color: rgba(255, 255, 255, 0.3) !important
+}    
+
+.q{
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.q:nth-child(1), .q:nth-child(2), .q:nth-child(3){
+    border-top: none;
+}
+.q:nth-child(1), .q:nth-child(4), .q:nth-child(7){
+    border-left: none;
+}
+.q:nth-child(7), .q:nth-child(8), .q:nth-child(9){
+    border-bottom: none;
+}
+.q:nth-child(3), .q:nth-child(6), .q:nth-child(9){
+    border-right: none;
 }
