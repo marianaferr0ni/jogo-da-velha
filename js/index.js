@@ -54,3 +54,24 @@ const empatou = () => {
       return q.classList.contains("x") || q.classList.contains("o");
     });
 };
+
+const colocarMarca = (q, classToAdd) => {
+    q.classList.add(classToAdd);
+};
+  
+const setTudoAquiHoverClass = () => {
+    tudoaqui.classList.remove("o");
+    tudoaqui.classList.remove("x");
+  
+    if (vezDoO) {
+      tudoaqui.classList.add("o");
+    } else {
+      tudoaqui.classList.add("x");
+    }
+};
+  
+const mudarJogador = () => {
+    vezDoO = !vezDoO;
+  
+    setTudoAquiHoverClass();
+};
