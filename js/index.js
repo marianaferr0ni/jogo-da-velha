@@ -16,3 +16,27 @@ const combinacoes = [
     [0, 4, 8],
     [2, 4, 6],
 ];
+const iniciarJogo = () => {
+    vezDoO = false;
+
+    for (const q of quadrados) {
+        q.classList.remove("o");
+        q.classList.remove("x");
+        q.removeEventListener("click", handleClick);
+        q.addEventListener("click", handleClick, { once: true });
+    }
+    
+    setTudoAquiHoverClass();
+    vencedor.classList.remove("mostrar");
+}
+
+const acabarJogo = (empate) => {
+    if (empate) {
+      msgvitoria.innerText = "Empate!";
+    } else {
+      msgvitoria.innerText = vezDoO
+        ? "O Venceu!"
+        : "X Venceu!";
+    }
+    vencedor.classList.add("mostrar");
+};
