@@ -11,23 +11,26 @@
     <title>Jogo da Velha</title>
   </head>
   <body>
-    <div class="tudoaqui">
+    <h1> JOGO DA VELHA </h1>
+    <div class="tudoaqui" data-tudoaqui>
         
-        <div class="q x" id="q"></div>
-        <div class="q o" id="q"></div>
-        <div class="q" id="q"></div>
-        <div class="q" id="q"></div>
-        <div class="q" id="q"></div>
-        <div class="q" id="q"></div>
-        <div class="q" id="q"></div>
-        <div class="q" id="q"></div>
-        <div class="q" id="q"></div>
+        <div class="q" data-q></div>
+        <div class="q" data-q></div>
+        <div class="q" data-q></div>
+        <div class="q" data-q></div>
+        <div class="q" data-q></div>
+        <div class="q" data-q></div>
+        <div class="q" data-q></div>
+        <div class="q" data-q></div>
+        <div class="q" data-q></div>
        
     </div>
 
-    <div class="vencedor" id="vencedor">
-        <p>X venceu!</p>
-        <button>Reiniciar</button>
+    <div class="vencedor" data-vencedor>
+      <p class="vencedor-text" data-vencedor-text>X Venceu!</p>
+      <button class="vencedor-button" data-vencedor-button>
+        Reiniciar
+      </button>
     </div>
 
     <script src="js/main.js"></script>
