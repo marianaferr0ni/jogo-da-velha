@@ -56,3 +56,21 @@ h1{
 .q:nth-child(3), .q:nth-child(6), .q:nth-child(9){
     border-right: none;
 }
+.q.x::before, 
+.q.x::after, 
+.tudoaqui.x .q:not(.x):not(.o):hover::after,
+.tudoaqui.x .q:not(.x):not(.o):hover::before{
+    content: "";
+    height: calc(100px * 0.15);
+    width: calc(100px * 0.9);
+    background-color: white;
+    position: absolute;
+}
+.q.x::before, 
+.tudoaqui.x .q:hover::before{
+    transform: rotate(45deg);
+}
+.q.x::after, 
+.tudoaqui.x .q:hover::after{
+    transform: rotate(-45deg);
+}
